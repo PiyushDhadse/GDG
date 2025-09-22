@@ -1,5 +1,5 @@
 import React from 'react';
-import './footer.css'; // Make sure to create this CSS file
+import './Footer.css'; // Make sure to create this CSS file
 
 // Assuming you have the Google Developer Groups logo image.
 // You might need to adjust the path based on your project structure.
