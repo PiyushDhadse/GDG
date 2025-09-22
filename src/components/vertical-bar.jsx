@@ -1,5 +1,4 @@
-import React from "react";
-import "./vertical-bar.css"; // Import the CSS file for additional styles if needed
+import React from "react"; // Import the CSS file for additional styles if needed
 export default function BlueStrip() {
   return (
     <div
