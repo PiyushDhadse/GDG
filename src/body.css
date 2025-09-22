@@ -1,12 +1,17 @@
 .main-content {
-  margin-top: 100px; /* Space for the fixed header */
+  margin-top: 100px;
   padding-bottom: 40px;
   width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.content-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 .gdg-info {
@@ -16,7 +21,7 @@
   text-align: center;
   color: grey;
   font-family: "Product Sans", "Product Sans Fallback", sans-serif;
-  height: 100%;
+  padding-top: 2rem;
 }
 
 .gdg-info h2 {
@@ -26,25 +31,25 @@
 
 .gdg-info h2 span.g1 {
   color: #4285f4;
-} /* Blue */
+}
 .gdg-info h2 span.o1 {
   color: #db4437;
-} /* Red */
+}
 .gdg-info h2 span.o2 {
   color: #f4b400;
-} /* Yellow */
+}
 .gdg-info h2 span.g2 {
   color: #4285f4;
-} /* Blue */
+}
 .gdg-info h2 span.l {
   color: #0f9d58;
-} /* Green */
+}
 .gdg-info h2 span.e {
   color: #db4437;
-} /* Red */
+}
 .gdg-info h2 span.rest {
   color: black;
-} /* Developer Groups in black */
+}
 
 .gdg-info h3 {
   margin: 0;
@@ -62,7 +67,7 @@
 .hero-description {
   color: #5f5f5f;
   font-weight: 400;
-  font-size: 20px; /* Adjusted for better readability */
+  font-size: 20px;
   line-height: 1.6;
   margin-top: 1.5rem;
   max-width: 500px;
@@ -77,9 +82,8 @@
   background-color: #4285f4;
   color: white;
   font-weight: 700;
-  font-size: 16px;
-  border: none;
   font-size: 32px;
+  border: none;
   cursor: pointer;
   margin-top: 20px;
   transition: background-color 0.3s ease;
@@ -91,7 +95,6 @@
 }
 
 .arrows-image {
-  right: 20px;
   width: 35px;
   height: auto;
   opacity: 0.8;
@@ -102,82 +105,94 @@
   margin-top: 20px;
   font-size: 45px;
   color: #5f5f5f;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 40px;
-  line-height: 150%;
-  letter-spacing: -0.2%;
-
   font-weight: bold;
 }
 
 .sections {
   margin-top: 60px;
   width: 100%;
-  max-width: max-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 60px;
 }
+
 .sections span {
-  font-size: 40px;
+  font-size: 18px;
   font-weight: normal;
   color: #5f5f5f;
   margin-bottom: -50px;
 }
 
-.sections img {
-  width: 394px;
-  height: auto;
-  align-content: center;
-  justify-self: center;
-}
-.achievements {
-  margin-top: 150px;
+.section-content {
   display: flex;
-  gap: 60px; /* spacing between each achievement */
+  align-items: center;
   justify-content: center;
-  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* Wrapper for each image + text */
+.section-image {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+}
+
+.section-text {
+  max-width: 400px;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  color: #333;
+}
+
+.achievements-section {
+  margin-top: 150px;
+  width: 100%;
+}
+
+.achievements {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
 .achievement-item {
-  position: relative; /* Essential for positioning the span relative to this container */
-  width: 150px; /* Or whatever width you want for the container */
-  height: 150px; /* Or whatever height you want for the container */
-  display: inline-block; /* Or block, depending on your layout */
-  border-radius: 50%; /* Make the container circular */
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-bottom: 20px;
 }
 
 .achievement-item img {
-  width: 100%; /* Make image fill the container */
-  height: 100%; /* Make image fill the container */
-  border-radius: 50%; /* Make the image circular */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
   object-fit: cover;
 }
 
 .achievement-item span {
   position: absolute;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%); /* Fine-tune centering */
-  color: #525252; /* Darker color for the text */
-  background-color: rgb(
-    255,
-    255,
-    255
-  ); /* White background for the inner circle */
-  border-radius: 50%; /* Keep it circular */
-  height: 120px; /* Adjust size of the white circle */
-  width: 120px; /* Adjust size of the white circle */
-  font-size: 40px; /* Larger font size for the number */
-  font-weight: bold; /* Make the text bold */
-  display: flex; /* Use flexbox for perfect text centering */
-  align-items: center; /* Center text vertically */
-  justify-content: center; /* Center text horizontally */
-  z-index: 1; /* Ensure the span is above the image */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #525252;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 120px;
+  width: 120px;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
 }
+
 .achievement-item p {
   text-align: center;
   margin-top: 10px;
@@ -188,120 +203,117 @@
 .technologies-section {
   margin-top: 7%;
   width: 100%;
-  text-align: center; /* Center all content within this section */
-  padding: 50px 20px; /* Add some vertical padding */
+  text-align: center;
+  padding: 50px 20px;
 }
 
 .technologies-header {
-  display: flex; /* Use flexbox to align the lines and heading */
-  align-items: center; /* Vertically align items in the middle */
-  justify-content: center; /* Horizontally center the group */
-  margin-bottom: 10px; /* Space between the main heading and subheading */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
 }
 
 .technologies-header .line {
-  flex-grow: 1; /* Allows the line to grow and fill available space */
-  height: 2px; /* Thickness of the line */
-  background-color: #ff6b6b; /* Red color for the line */
-  max-width: 220px; /* Maximum width for each line */
-  margin: 0 15px; /* Space between the line and the heading */
+  flex-grow: 1;
+  height: 2px;
+  background-color: #ff6b6b;
+  max-width: 220px;
+  margin: 0 15px;
 }
 
 .technologies-header h1 {
-  font-size: 48px; /* Large font size for the main heading */
-  color: #555555; /* Dark grey color */
-  font-weight: 700; /* Bold font weight */
-  margin: 0; /* Remove default margin */
-  white-space: nowrap; /* Prevent "Technologies" from wrapping */
+  font-size: 48px;
+  color: #555555;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .technologies-subheader {
-  font-size: 18px; /* Font size for the subheading */
-  color: #777777; /* Lighter grey color */
-  margin-top: 0; /* Align with the heading margin */
-  max-width: 600px; /* Limit width for readability */
-  margin-left: auto; /* Center the subheader */
-  margin-right: auto; /* Center the subheader */
-  line-height: 1.5; /* Improve readability */
+  font-size: 18px;
+  color: #777777;
+  margin-top: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
 }
 
 .tech-grid {
-  display: flex; /* Use flexbox to arrange cards in a row */
-  justify-content: center; /* Center the cards horizontally */
-  flex-wrap: wrap; /* Allow cards to wrap to the next line on smaller screens */
-  gap: 30px; /* Space between the cards */
-  padding: 40px 20px; /* Padding around the entire grid */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 40px 20px;
 }
 
 .tech-card {
-  position: relative; /* Needed for positioning the top line */
-  width: 250px; /* Fixed width for each card */
-  height: 165px; /* Fixed height for each card */
-  background-color: #ffffff; /* White background */
-  border-radius: 15px; /* Rounded corners for the card */
-  box-shadow: 0px 9px 26px 13px rgba(0, 0, 0, 0.08); /* Soft shadow */
+  position: relative;
+  width: 250px;
+  height: 165px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0px 9px 26px 13px rgba(0, 0, 0, 0.08);
   display: flex;
-  flex-direction: column; /* Stack content vertically */
-  align-items: center; /* Center content horizontally */
-  justify-content: space-between; /* Distribute space vertically */
-  padding-bottom: 20px; /* Padding at the bottom for the dropdown icon */
-  overflow: hidden; /* Ensure the top line is cleanly cut by border-radius */
-  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
 }
 
 .tech-card:hover {
-  transform: translateY(-5px); /* Lift card slightly on hover */
+  transform: translateY(-5px);
 }
 
 .card-top-line {
   position: absolute;
   top: 0;
-  left: 50%; /* Start line from center */
-  transform: translateX(-50%); /* Center the line horizontally */
-  width: 140px; /* Width of the colored line */
-  height: 5px; /* Thickness of the line */
-  border-bottom-left-radius: 5px; /* Rounded corners for the line */
-  border-bottom-right-radius: 5px; /* Rounded corners for the line */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140px;
+  height: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .red-line {
-  background-color: #ff6b6b; /* Red color for Android */
+  background-color: #ff6b6b;
 }
 
 .blue-line {
-  background-color: #4285f4; /* Blue color for Flutter */
+  background-color: #4285f4;
 }
 
 .green-line {
-  background-color: #34a853; /* Green color for Cloud */
+  background-color: #34a853;
 }
 
 .tech-card img {
-  width: 90px; /* Size of the logo image */
-  height: 90px; /* Size of the logo image */
-  object-fit: contain; /* Ensure the image fits without cropping */
-  margin-top: 30px; /* Space from the top line */
-  margin-bottom: 10px; /* Space below the image */
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .tech-name {
-  font-size: 20px; /* Font size for the technology name */
-  color: #555555; /* Dark grey color */
-  font-weight: 600; /* Semi-bold */
-  margin: 0; /* Remove default margin */
+  font-size: 20px;
+  color: #555555;
+  font-weight: 600;
+  margin: 0;
   text-align: center;
 }
 
 .dropdown-icon {
-  font-size: 18px; /* Size of the dropdown arrow */
-  color: #777777; /* Grey color for the arrow */
-  cursor: pointer; /* Indicate it's clickable */
-  margin-top: auto; /* Pushes the icon to the bottom */
+  font-size: 18px;
+  color: #777777;
+  cursor: pointer;
+  margin-top: auto;
 }
 
-
-
-/* Container for the entire FAQ section */
 .faq-container {
   max-width: 800px;
   margin: 50px auto;
@@ -311,29 +323,29 @@
 
 .faq-question-section {
   display: flex;
-  justify-content: center; /* Center the item horizontally */
-  padding: 20px; /* Some padding around the item */
+  justify-content: center;
+  padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8; /* A light background for the page */
+  background-color: #f8f8f8;
 }
 
 .faq-question-item {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between arrow and text */
-  width: 100%; /* Take full width of its parent */
-  max-width: 600px; /* Limit the maximum width as in the image */
+  gap: 10px;
+  width: 100%;
+  max-width: 600px;
   padding: 15px 20px;
   background-color: #ffffff;
-  border: 1px solid #e0e0e0; /* Light grey border */
-  border-radius: 30px; /* Highly rounded corners */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Soft shadow */
-  cursor: pointer; /* Indicate it's clickable */
+  border: 1px solid #e0e0e0;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
   transition: all 0.2s ease-in-out;
 }
 
 .faq-question-item:hover {
-  border-color: #d0d0d0; /* Slightly darker border on hover */
+  border-color: #d0d0d0;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
@@ -341,49 +353,124 @@
   font-size: 20px;
   font-style: normal;
   font-weight: bold;
-  color: #ff6b6b; /* Red color for the arrow */
-  transform: rotate(0deg); /* Initial state for the arrow */
+  color: #ff6b6b;
+  transform: rotate(0deg);
   transition: transform 0.3s ease;
-  display: flex; /* Helps center the arrow visually */
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .faq-question-text {
   font-size: 18px;
-  color: #555555; /* Dark grey text */
+  color: #555555;
   font-weight: 600;
-  flex-grow: 1; /* Allows text to take up available space */
+  flex-grow: 1;
 }
 
 .solution-box-container {
   display: flex;
-  justify-content: center; /* Center the box horizontally */
-  padding: 20px; /* Some padding around the box */
+  justify-content: center;
+  padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: #f8f8f8; /* A light background for the page */
+  background-color: #f8f8f8;
 }
 
 .solution-box {
   width: 100%;
-  max-width: 600px; /* Limit the maximum width as in the image */
+  max-width: 600px;
   background-color: #ffffff;
-  border-radius: 10px; /* Rounded corners */
-  border: 1px solid #e0e0e0; /* Light grey border */
-  border-left: 5px solid #ff6b6b; /* Red left border */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Soft shadow */
-  padding: 20px 25px; /* Padding inside the box */
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  border-left: 5px solid #ff6b6b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px 25px;
   transition: all 0.2s ease-in-out;
 }
 
-.solution-box p {
-  margin: 0; /* Remove default paragraph margin */
-  font-size: 16px;
-  color: #666666; /* Grey text color */
-  line-height: 1.6; /* Improve readability */
-}
-
-/* Optional: Add a slight hover effect if desired */
 .solution-box:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  border-color: #d0d0d0;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 1024px) {
+  .gdg-info h2 {
+    font-size: 3rem;
+  }
+  .gdg-info h3 {
+    font-size: 1.5rem;
+  }
+  .hero-description {
+    font-size: 18px;
+  }
+  .sections span {
+    font-size: 18px;
+  }
+  .achievements {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .gdg-info h2 {
+    font-size: 2.5rem;
+  }
+  .gdg-info h3 {
+    font-size: 1.2rem;
+  }
+  .hero-description {
+    font-size: 16px;
+  }
+  .join-us-btn {
+    width: 200px;
+    height: 60px;
+    font-size: 24px;
+  }
+  .sections span {
+    font-size: 18px;
+  }
+  .section-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .reverse-on-mobile {
+    flex-direction: column-reverse;
+  }
+  .achievements {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+  }
+  .technologies-header h1 {
+    font-size: 32px;
+  }
+  .technologies-header .line {
+    max-width: 100px;
+  }
+  .tech-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tech-card {
+    width: 90%;
+  }
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .gdg-info h2 {
+    font-size: 2rem;
+  }
+  .gdg-info h3 {
+    font-size: 1rem;
+  }
+  .GTKU-text {
+    font-size: 30px;
+  }
+  .sections span {
+    font-size: 18px;
+  }
 }

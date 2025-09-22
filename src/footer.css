@@ -4,6 +4,7 @@
   padding: 40px 20px;
   font-family: Arial, sans-serif;
   border-top: 1px solid #e0e0e0; /* Subtle top border */
+  padding-bottom: 0px;
 }
 
 .footer-content {
@@ -175,4 +176,14 @@
     flex-direction: column;
     gap: 10px;
   }
+}
+.location-icon {
+  width: 22px; /* Adjust size as needed */
+  height: auto;
+  margin-top: 2px; /* Align with text */
+}
+.email-icon {
+  width: 22px; /* Adjust size as needed */
+  height: auto;
+  margin-top: 2px; /* Align with text */
 }

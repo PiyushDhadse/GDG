@@ -21,7 +21,7 @@ import Footer from "./footer";
 import "./body.css";
 function Body() {
   return (
-    <main className="main-content">
+    <main className="main-content" id="home">
       <div className="gdg-info">
         <h2>
           <span className="g1">G</span>
@@ -51,28 +51,26 @@ function Body() {
 
         <span className="GTKU-text">Get To Know Us!</span>
 
-        <div className="sections">
-          <span>Our Mission</span>
-          <HorBarblue />
+        <div className="sections" id="events">
+          <span >Our Mission</span>
+          <HorBarblue className="hide-on-mobile"/>
           <div
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              gap: "20px", // spacing between elements
+              gap: "20px",
             }}
           >
-            {/* Left side image */}
             <img
               src={ourmissionimage}
               alt="Our Mission"
               style={{
-                width: "350px", // adjust size as needed
+                width: "350px",
                 height: "auto",
               }}
             />
 
-            {/* Middle text */}
             <span
               style={{
                 maxWidth: "400px",
@@ -86,27 +84,22 @@ function Body() {
               building strong tech foundation, while enabling all tech
               enthusiasts to contribute to the global society.
             </span>
-
-            {/* Right vertical bar */}
-            <VerticalBar />
+            <VerticalBar className="hide-on-mobile" />
           </div>
         </div>
 
         <div className="sections">
-          <span>Our Perspective</span>
-          <HorBar />
+          <span id="ourperspective">Our Perspective</span>
+          <HorBar className="hide-on-mobile" />
           <div
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              gap: "20px", // spacing between elements
+              gap: "20px",
             }}
           >
-            {/* Left vertical bar */}
-            <VerticalBarGreen />
-
-            {/* Middle text */}
+            <VerticalBarGreen className="hide-on-mobile" />
             <span
               style={{
                 maxWidth: "400px",
@@ -122,13 +115,11 @@ function Body() {
               developers, spreading stimulative ideas and working for a
               solution-driven team.
             </span>
-
-            {/* Right image */}
             <img
               src={ourperspectiveimage}
               alt="Our Perspective"
               style={{
-                width: "350px", // adjust size as needed
+                width: "350px",
                 height: "auto",
               }}
             />
@@ -136,28 +127,26 @@ function Body() {
         </div>
 
         <div className="sections">
-          <span>What Keeps Us Going</span>
-          <HorBarYellow />
+          <span id="whatkeepsusgoing">What Keeps Us Going</span>
+          <HorBarYellow className="hide-on-mobile" />
           <div
             style={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              gap: "20px", // spacing between elements
+              gap: "20px",
             }}
           >
-            {/* Left image */}
             <img
               src={whatkeepsusgoingimage}
               alt="What Keeps Us Going"
               style={{
-                width: "350px", // adjust size as needed
+                width: "350px",
                 height: "auto",
                 display: "block",
               }}
             />
 
-            {/* Middle text */}
             <span
               style={{
                 maxWidth: "400px",
@@ -175,21 +164,19 @@ function Body() {
               knowledge.
             </span>
 
-            {/* Right vertical bar */}
-            <VerticalBarYellow />
+            <VerticalBarYellow className="hide-on-mobile" />
           </div>
         </div>
 
         <div
           style={{
             display: "flex",
-            gap: "20px", // space between each achievement
+            gap: "20px",
             justifyContent: "center",
             alignItems: "flex-start",
           }}
         >
-          {/* Achievement 1 */}
-          <div className="achievements">
+          <div className="achievements" id="team">
             <div className="achievement-item">
               <img src={achievementsimage} alt="Achievements-1" />
               <span>03+</span>
@@ -212,8 +199,8 @@ function Body() {
             </div>
           </div>
         </div>
-        <div className="technologies-section">
-          <div className="technologies-header">
+        <div className="technologies-section" id="alumni">
+          <div className="technologies-header" id="technologies">
             <div className="line"></div>
             <h1>Technologies</h1>
             <div className="line"></div>
@@ -244,7 +231,6 @@ function Body() {
             <span class="dropdown-icon">&#x2304;</span>
           </div>
         </div>
-
         <FAQ />
         <Footer />
       </div>

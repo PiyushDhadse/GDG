@@ -1,54 +1,120 @@
 .header {
-    top: 0;
-    width: 100%;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.12);
-    z-index: 1000;
-    box-sizing: border-box;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  z-index: 1000;
+  box-sizing: border-box;
+  position: fixed;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .logo {
-    color: grey;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-weight: 600;
-    font-size: 1.25rem;
+  color: grey;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.25rem;
 }
 
 .logo-img {
-    height: 32px;
-    width: auto;
+  height: 32px;
+  width: auto;
 }
 
 .nav-links {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-    align-items: center;
-    margin: 0;
-    padding: 0;
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
-    text-decoration: none;
-    color: grey;
-    font-weight: 500;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  color: grey;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #4285F4; /* Google blue */
+  color: #4285f4;
 }
 
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  gap: 6px;
+  z-index: 1001;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: grey;
+  transition: 0.4s;
+}
+
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* === Responsive Adjustments for Mobile Menu === */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden off-screen to the right */
+    background-color: white;
+    width: 250px; /* Professional, fixed width for the menu */
+    height: 100vh;
+    flex-direction: column;
+    align-items: flex-start; /* Align menu items to the left */
+    justify-content: flex-start; /* Start items from the top */
+    padding: 70px 20px; /* Top padding to clear the header */
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.12); /* Shadow on the left edge */
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  /* Show the menu by sliding it in from the right */
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    margin-bottom: 20px; /* Space between list items */
+  }
+
+  .nav-links a,
+  .nav-links li {
+    font-size: 18px; /* Slightly larger font for readability */
+    color: #333;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+}
